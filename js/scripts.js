@@ -22,4 +22,21 @@ $(document).ready(function(){
         $('#reserveModal').modal('show');
     });
 
+    $('#lxbtn').click(function(){
+        modalClose('#loginModal');
+    });
+    $('#lcbtn').click(function(){
+        modalClose('#loginModal');
+    });
+    $('#rxbtn').click(function(){
+        modalClose('#reserveModal');
+    });
+    $('#rcbtn').click(function(){
+        modalClose('#reserveModal');
+    });
+
 });
+function modalClose(modalname){
+    if(typeof(modalname) === 'string')
+        $(modalname).modal('hide');
+}
